@@ -11,20 +11,26 @@ href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.cs
     </head>
     <body>
         <header class="header">
-            <div class="header-1">                            
-                <img src="static/images/logo-mercado-liebre.svg" class="logo-img">                
-                <div class="serchbar">
-                <input type="search" id="name" name="name" required
-                    minlength="4" maxlength="15" size="20" value="Buscar productos, marcas">                     
+            <div class="header-1">
+                <div class="logo">                            
+                    <img src="static/images/logo-mercado-liebre.svg" class="logo-img">
                 </div>
+                <div class="serchbar">
+                    <input type="search" id="name" name="name" required
+                        minlength="4" maxlength="15" size="20" value="Buscar productos, marcas">
+                        <i class="fas fa-search"></i>                     
+                </div>
+                <div class="lema">
                 <h2 class="lema-texto">
                     <i class="fa fa-hand-holding-usd"></i>
                     Compra en cuotas y sin tajeta de crédito
                 </h2>
                 </div>
-                <div class = "burger-menu">
-                    <i class = "fa fa-2x fa-bars burger" ></i>
-                </div>
+                
+            </div>
+            <div class = "burger-menu">
+                <i class = "fa fa-2x fa-bars burger" ></i>
+            </div>
             <div class="header-2">            
                 <ul class="navbar">
                     <li><a href="#">Ofertas</a></li>
@@ -45,13 +51,15 @@ href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.cs
             <div class="form-login">
             <form action="/" method="GET">
                 <div class="input">
-                    <input type="text" class="text" name="usuario" placeholder="Nombre de usuario">
+                    <input type="text" class="text" name="usuario" minlength="5" placeholder="Nombre de usuario" required>
                 </div>
                 <div class="input">
-                    <input type="password" class="text" name="password" placeholder="Elegí tu contraseña">
+                    <input type="password" class="text" name="password" placeholder="Elegí tu contraseña" required>
                 </div>
-                <div class="boton">
-                    <input type="submit" class="boton-enviar" name="enviar">
+                <div class="boton-login">
+                    <div class="input">
+                        <input type="submit" class="boton-enviar" value="Enviar">
+                    </div>
                 </div>
         
             </form>

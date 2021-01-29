@@ -139,8 +139,6 @@ main {
     display: block;
     font-size: 16px;
     padding: 5px;
-    /*width: 30px;*/
-    /*height: 30px;*/
     width: 20px;
     height: 20px;
     border: 1px solid #39b54a;
@@ -201,6 +199,35 @@ input.text, select.text, textarea.text {
     padding: 5px;
     width: 100%;
  }
+ .boton-borrar {
+    background: #03264C;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+ }
+ .boton-borrar:hover 
+ {
+    background: #850000;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+ }
+
+ .botones-registro {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+ }
+ .boton {
+     width: 45%;
+ }
+ .boton-login {
+     width: 100%;
+ }
 
  .intereses {
      margin-left: 10px;
@@ -218,6 +245,17 @@ input.text, select.text, textarea.text {
 @media (min-width: 361px){
     .articulo:hover .descripcion {
         display: block;
+    }
+    .precios {
+        font-size: 12px;
+    }
+    .descuentos {
+        font-size: 12px;
+        width: 70%;
+        text-align: center;
+    }
+    .descripcion {
+        font-size: 13px;
     }
     
 .articulo {
@@ -239,6 +277,7 @@ input.text, select.text, textarea.text {
     .burger-menu {
         display: none;
     }
+    
     .header-1 {
         display: flex;
         justify-content: space-between;

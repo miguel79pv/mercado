@@ -11,20 +11,26 @@ href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.cs
     </head>
     <body>
         <header class="header">
-            <div class="header-1">                            
-                <img src="static/images/logo-mercado-liebre.svg" class="logo-img">                
-                <div class="serchbar">
-                <input type="search" id="name" name="name" required
-                    minlength="4" maxlength="15" size="20" value="Buscar productos, marcas">                     
+            <div class="header-1">
+                <div class="logo">                            
+                    <img src="static/images/logo-mercado-liebre.svg" class="logo-img">
                 </div>
+                <div class="serchbar">
+                    <input type="search" id="name" name="name" required
+                        minlength="4" maxlength="15" size="20" value="Buscar productos, marcas">
+                        <i class="fas fa-search"></i>                     
+                </div>
+                <div class="lema">
                 <h2 class="lema-texto">
                     <i class="fa fa-hand-holding-usd"></i>
                     Compra en cuotas y sin tajeta de crédito
                 </h2>
                 </div>
-                <div class = "burger-menu">
-                    <i class = "fa fa-2x fa-bars burger" ></i>
-                </div>
+                
+            </div>
+            <div class = "burger-menu">
+                <i class = "fa fa-2x fa-bars burger" ></i>
+            </div>
             <div class="header-2">            
                 <ul class="navbar">
                     <li><a href="#">Ofertas</a></li>
@@ -43,7 +49,7 @@ href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.cs
         </header>
         <main>
             <div class="form-registro">
-            <form action="/registro" method="POST">
+            <form action="/" method="GET">
                 <div class="input">
                     <input type="text" class="text" name="nombre" minlength="5" placeholder="Nombre y apellido" required>
                 </div>
@@ -51,51 +57,48 @@ href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.cs
                     <input type="text" class="text" name="usuario" placeholder="Nombre de usuario" required>
                 </div>
                 <div class="input">
-                    <input type="email"  class="text" name="email" placeholder="E-mail">
+                    <input type="email"  class="text" name="email" placeholder="E-mail" required>
                 </div>
                 <div class="input">
                     <label for="fechanacimiento"><h2 class="titulo-formuario">Fecha de nacimiento</h2></label>
                     <br>
-                    <input type="date" name="fechanacimiento" placeholder="Ingrese su fecha de nacimiento">
+                    <input type="date" name="fechanacimiento" placeholder="Ingrese su fecha de nacimiento" required>
                 </div>
                 <div class="input">
-                    <input type="text" name="domicilio" placeholder="Domicilio">
+                    <input type="text" name="domicilio" placeholder="Domicilio" required>
                 </div>
 
                 <div class="input">
                     <label for="perfil"><h2 class="titulo-formuario">Perfil del usuario</h2></label>
                     <br>
-                    <input type="radio" name="sexo">
+                    <input type="radio" name="comprador" required>
                     <label for="perfil">Comprador</label>
-                    <input type="radio" name="sexo">
+                    <input type="radio" name="vendedor" required>
                     <label for="perfil">Vendedor</label>
                 </div>
                 <div class="intereses">
         
                 <div class="intput">
                     <label for="perfil"><h2 class="titulo-formuario">Intereses</h2></label>
-                    <input type="checkbox" name="intereses" value="Electro">
+                    <input type="checkbox" name="intereses" value="Electro" required>
                     <label for="intereses">Electro</label>
                      
                     <br>
-                    <input type="checkbox" name="intereses" value="Moda">
+                    <input type="checkbox" name="intereses" value="Moda" required>
                     <label for="intereses">Moda</label>
                     
                     <br>
-                    <input type="checkbox" name="intereses" value="Hogar">
+                    <input type="checkbox" name="intereses" value="Hogar" required>
                     <label for="intereses">Hogar</label>
                     
                     <br>
-                    <input type="checkbox" name="intereses" value="Jugueteria">
+                    <input type="checkbox" name="intereses" value="Jugueteria" required>
                     <label for="intereses">Jugueteria</label>
                     
                     <br>
-                    <input type="checkbox" name="intereses" value="Vida sana">
+                    <input type="checkbox" name="intereses" value="Vida sana" required>
                     <label for="intereses">Vida sana</label>
                     
-                    <br>
-                    <input type="checkbox" name="intereses" value="Vida sana">
-                    <label for="intereses">Vida sana</label>
                     
                 </div> 
             </div>
@@ -104,12 +107,20 @@ href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.cs
                 <input type="file" name="identificacion">
                 </div>      
                 <div class="input">
-                    <input type="password" class="text" name="password" placeholder="Elige tu contraseña">
-                    <input type="password" class="text" name="re-password" placeholder="Confirma tu contraseña">
+                    <input type="password" class="text" name="password" placeholder="Elige tu contraseña" required>
+                    <input type="password" class="text" name="re-password" placeholder="Confirma tu contraseña" required>
                 </div>
-                <div class="input">
-                    <input type="reset" class="boton-enviar" value="Borrar">
-                    <input type="submit" value="Enviar">
+                <div class="botones-registro">   
+                    <div class="boton">
+                        <div class="input">
+                            <input type="reset" class="boton-borrar" value="Borrar">                    
+                        </div>
+                    </div>
+                    <div class="boton">
+                        <div class="input">
+                            <input type="submit" class="boton-enviar" value="Enviar">
+                        </div>
+                    </div>
                 </div>
             </div>            
             </form>
